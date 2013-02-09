@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+	<h1>You are signed in!</h1>
+	<h2>To Do </h2>
+	<p> 
+		<ul> 
+			<li> 6.1 Git and Github </li>
+			<li> 6.2 Heroku </li>
+		</ul>
+	</p>
+<% else %>
+<div class="center hero-unit">
+    <h1>Welcome to One Month Rails</h1>
+
+    <h2>
+      You've found the home page for the
+      <a href="http://omrails.com/">One Month Rails</a>
+      first application.
+    </h2>
+
+    <%= link_to "Sign up now!", new_user_registration_path, 
+                                class: "btn btn-large btn-primary" %>
+</div>
+<% end %>
